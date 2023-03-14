@@ -168,7 +168,8 @@ a {
 		height: 40px;
 	}
 }
-.navbar-nav .nav-item::after {
+.navbar-nav .nav-item::after,
+.navbar-nav .nav-item.active::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -178,7 +179,8 @@ a {
 	transition: 0.3s;
 }
 
-.navbar-nav .nav-item:hover::after {
+.navbar-nav .nav-item:hover::after,
+.navbar-nav .nav-item.active::after {
 	background-color: var(--main-color);
 	width: 100%;
 }
@@ -308,4 +310,8 @@ a {
 	width: 100%;
 	background-color: white;
 	z-index: 999;
+}
+
+.nav-link {
+	width: 100%;
 }
