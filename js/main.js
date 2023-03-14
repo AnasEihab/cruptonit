@@ -52,5 +52,25 @@ let setLanguages = (language) => {
 	} else {
 		imgHome.classList.remove('active_img');
 	}
-
 };
+
+let allLiset = document.querySelectorAll('.navbar-nav .nav-item');
+let allLisetLink = document.querySelectorAll('.navbar-nav .nav-link');
+
+allLiset.forEach(function (el) {
+	el.onclick = function() {
+		allLiset.forEach(function(el) {
+			el.classList.remove('active')
+		})
+		this.classList.add('active')
+	}
+});
+
+allLisetLink.forEach(function (el) {
+	el.onclick = function() {
+		allLisetLink.forEach(function(el) {
+			el.classList.remove('active')
+		})
+		this.classList.add('active')
+	}
+});
